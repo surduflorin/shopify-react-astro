@@ -1,11 +1,15 @@
-import react from '@astrojs/react';
 
+  // astro.config.js
+  import node_modules/react from '@astrojs/node_modules/react';
+
+  // ...
+  integrations: [
+    node_modules/react(),
+  ],
+  
 export default {
   buildOptions: {
-    site: 'https://shopify-astro.netlify.app/',
+    site: 'https://shopify-react-astro.netlify.app/',
   },
-  renderers: ['@astrojs/renderer-react'],
-  integrations: [
-    react(),
-  ]
+  
 };
