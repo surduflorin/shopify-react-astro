@@ -1,15 +1,13 @@
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
-  // astro.config.js
-  import node_modules/react from '@astrojs/node_modules/react';
-
+// https://astro.build/config
+export default defineConfig({
+  // buildOptions: {
+  //   site: 'https://shopify-astro.netlify.app/',
+  // },
+  renderers: [
   // ...
-  integrations: [
-    node_modules/react(),
-  ],
-  
-export default {
-  buildOptions: {
-    site: 'https://shopify-react-astro.netlify.app/',
-  },
-  
-};
+  '@astrojs/renderer-react'],
+  integrations: [react()]
+});
